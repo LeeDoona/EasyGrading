@@ -3,6 +3,7 @@ from account.views import mail
 from account.views import profile
 from account.views import setting
 from account.views import donate
+from publisher.views import publication, my_publication
 
 urlpatterns = patterns('',
     url(r'^profile$', profile.profile_page),
@@ -13,5 +14,5 @@ urlpatterns = patterns('',
     url(r'^delete_private_message$', mail.delete_private_message),
     url(r'^settings$', setting.settings_page),
     url(r'^update_password$', setting.update_password),
-    url(r'^donate$', donate.donate_page),
+    url(r'^donate$', my_publication.my_publications_page),
 )
